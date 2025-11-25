@@ -9,4 +9,7 @@ name = "simopt_extensions"
 crate-type = ["cdylib"]
 
 [dependencies]
-pyo3 = "0.27.0"
+anyhow = "1.0.100"
+mrg32k3a-rs = { git = "https://github.com/simopt-admin/mrg32k3a", rev = "85da10f", version = "0.1.0" }
+pyo3 = { version = "0.27.0", features = ["anyhow"] }
+thiserror = "2.0.17"
