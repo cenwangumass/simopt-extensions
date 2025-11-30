@@ -1,5 +1,7 @@
-from .simopt_extensions import *
+from .amusement_park import replicate
 
-__doc__ = simopt_extensions.__doc__
-if hasattr(simopt_extensions, "__all__"):
-    __all__ = simopt_extensions.__all__
+
+def patch_model():
+    class_name = "simopt.models.amusementpark.AmusementPark"
+    function = replicate
+    return class_name, function
